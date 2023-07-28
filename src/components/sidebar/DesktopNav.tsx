@@ -1,5 +1,5 @@
 import clsx from "clsx"
-import logo from "../assets/logo.svg"
+import logo from "../../assets/logo.svg"
 import { Link, useNavigate } from "react-router-dom"
 import { MenuDef } from "./SubModuleMenuItem"
 

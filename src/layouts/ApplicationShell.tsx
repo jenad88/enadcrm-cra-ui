@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react"
 import { AppProvider } from "../context/AppContext"
 import Header from "../components/header/Header"
-import Sidebar from "./Sidebar"
+import Sidebar from "../components/sidebar/Sidebar"
 
 const userNavigation = [
   { name: "Your profile", href: "#" },
