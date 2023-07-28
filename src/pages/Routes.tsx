@@ -1,4 +1,5 @@
 import { createBrowserRouter, RouterProvider, defer } from "react-router-dom"
+import AccountLandingPage from "./AccountLandingPage"
 import LeadLandingPage from "./LeadLandingPage"
 import ErrorPage from "./ErrorPage"
 import HomePage from "./HomePage"
@@ -14,6 +15,10 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <HomePage />,
+      },
+      {
+        path: "accounts",
+        element: <AccountLandingPage />,
       },
       {
         path: "leads",

@@ -13,6 +13,21 @@ import {
       current: true,
     },
     {
+      name: "Accounts",
+      href: "/accounts",
+      icon: UsersIcon,
+      current: false,
+      menuItems: [
+        { name: "View Accounts", href: "/accounts" },
+        { name: "+ New Account", href: "/accounts/create" },
+        { name: "accounts 2", href: "#" },
+        { name: "accounts 3", href: "#" },
+        { name: "accounts 4", href: "#" },
+        { name: "accounts 5", href: "#" },
+        { name: "accounts 6", href: "#" },
+      ],
+    },
+    {
       name: "Leads",
       href: "/leads",
       icon: UsersIcon,
