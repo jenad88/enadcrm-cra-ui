@@ -1,17 +1,20 @@
 import React from "react"
 import "./assets/App.css"
 
-import Main from "./layouts/Main"
-import ApplicationShell from "./layouts/ApplicationShell"
+import MainContainer from "./layouts/MainContainer"
+import ApplicationLayout from "./layouts/ApplicationLayout"
+import { PageContainer } from "./layouts/PageContainer"
 
 function App() {
   return (
     <>
       <main>
         <div>
-          <ApplicationShell>
-            <Main />
-          </ApplicationShell>
+          <ApplicationLayout>
+            <MainContainer>
+              <PageContainer />
+            </MainContainer>
+          </ApplicationLayout>
         </div>
       </main>
     </>

@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react"
+import { useState } from "react"
 import { AppProvider } from "../context/AppContext"
 import Header from "../components/header/Header"
 import Sidebar from "../components/sidebar/Sidebar"
@@ -8,7 +8,7 @@ const userNavigation = [
   { name: "Sign out", href: "#" },
 ]
 
-export default function ApplicationShell({
+export default function ApplicationLayout({
   children,
 }: {
   children: React.ReactNode
