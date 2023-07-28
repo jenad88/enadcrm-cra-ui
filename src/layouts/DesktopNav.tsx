@@ -1,6 +1,6 @@
 import clsx from "clsx"
 import logo from "../assets/logo.svg"
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import { MenuDef } from "./SubModuleMenuItem"
 
 type DesktopNavProps = {
@@ -11,7 +11,7 @@ type DesktopNavProps = {
 }
 
 const DesktopNav: React.FunctionComponent<DesktopNavProps> = (props) => {
-  //   const router = useRouter()
+  const navigate = useNavigate()
   const { items, setSidebarOpen, sideOver, setSideOver } = props
 
   const handleButtonClick = (name: string) => {
@@ -24,7 +24,7 @@ const DesktopNav: React.FunctionComponent<DesktopNavProps> = (props) => {
         if (!item.menuItems) {
           setSidebarOpen(false)
           setSideOver(null)
-          //   router.push(item.href)
+          navigate(item.href)
         } else {
           setSideOver(name)
         }
