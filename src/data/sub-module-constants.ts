@@ -3,7 +3,7 @@ import {
     UsersIcon,
   } from "@heroicons/react/24/outline";
   
-  import { MenuDef } from "../layouts/SubModuleMenuItem";
+  import { MenuDef } from "../components/sidebar/SubModuleMenuItem";
   
   export const CRM_SUB_MODULE_MENU: MenuDef[] = [
     {
