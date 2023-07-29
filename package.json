@@ -48,14 +48,20 @@
     ]
   },
   "devDependencies": {
+    "@mswjs/data": "^0.13.0",
     "@tailwindcss/forms": "^0.5.4",
     "@tailwindcss/typography": "^0.5.9",
     "autoprefixer": "^10.4.14",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-prettier": "^5.0.0",
+    "msw": "^1.2.3",
+    "msw-devtools": "^1.0.2",
     "postcss": "^8.4.27",
     "prettier": "^3.0.0",
     "prettier-plugin-tailwindcss": "^0.4.1",
     "tailwindcss": "^3.3.3"
+  },
+  "msw": {
+    "workerDirectory": "public"
   }
 }

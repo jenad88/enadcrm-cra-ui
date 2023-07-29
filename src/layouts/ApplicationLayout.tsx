@@ -1,5 +1,4 @@
 import { useState } from "react"
-import { AppProvider } from "../context/AppContext"
 import Header from "../components/header/Header"
 import Sidebar from "../components/sidebar/Sidebar"
 
@@ -17,18 +16,16 @@ export default function ApplicationLayout({
 
   return (
     <>
-      <AppProvider>
-        <div className='mx-auto'>
-          <Sidebar sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
-          <div className='lg:pl-20'>
-            <Header
-              userNavigation={userNavigation}
-              setSidebarOpen={setSidebarOpen}
-            />
-            {children}
-          </div>
+      <div className='mx-auto'>
+        <Sidebar sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
+        <div className='lg:pl-20'>
+          <Header
+            userNavigation={userNavigation}
+            setSidebarOpen={setSidebarOpen}
+          />
+          {children}
         </div>
-      </AppProvider>
+      </div>
     </>
   )
 }
