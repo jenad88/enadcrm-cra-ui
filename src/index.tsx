@@ -4,6 +4,12 @@ import "./assets/global.css"
 import { Routes } from "./pages/Routes"
 import reportWebVitals from "./reportWebVitals"
 
+// Start the mocking conditionally.
+if (process.env.NODE_ENV === "development") {
+  const { worker } = require("./testing/mocks/browser")
+  worker.start()
+}
+
 const root = ReactDOM.createRoot(document.getElementById("root") as HTMLElement)
 root.render(
   <React.StrictMode>

@@ -3,7 +3,7 @@ import MobileNav from "./MobileNav"
 import SubModuleMenuSlideOver from "./SubModuleMenuSlideOver"
 import DesktopNav from "./DesktopNav"
 
-import { CRM_SUB_MODULE_MENU } from "../../data/sub-module-constants"
+import { CRM_SUB_MODULE_MENU } from "../../config/sub-module-constants"
 import { MenuDef } from "./SubModuleMenuItem"
 
 type SidebarProps = {
