@@ -1,4 +1,5 @@
 import { useEffect } from "react"
+import { API_URL } from "../config/constants"
 import LeadLayout from "../features/leads/LeadLayout"
 import LeadListView from "../features/leads/components/LeadListView"
 
@@ -6,7 +7,7 @@ export default function LeadLandingPage() {
   useEffect(() => {
     async function healthcheck() {
       try {
-        const response = await fetch("/api/healthcheck")
+        const response = await fetch(`${API_URL}/healthcheck`)
 
         if (!response.ok) {
           console.error(response)
