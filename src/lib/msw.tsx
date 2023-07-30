@@ -7,9 +7,11 @@ export type MSWWrapperProps = {
   children: ReactNode
 }
 
+console.log("MSWWrapper initialized")
 require("../testing/mocks/initialize")
 
-export const MSWWrapper = ({ children }: MSWWrapperProps) => {
+const MSWWrapper: React.FunctionComponent<MSWWrapperProps> = (props) => {
+  const { children } = props
   return (
     <>
       {IS_DEVELOPMENT && <MSWDevTools db={db} handlers={handlers} />}
@@ -17,3 +19,5 @@ export const MSWWrapper = ({ children }: MSWWrapperProps) => {
     </>
   )
 }
+
+export default MSWWrapper
