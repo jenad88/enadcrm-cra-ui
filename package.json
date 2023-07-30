@@ -75,8 +75,8 @@
     "workbox-webpack-plugin": "^6.4.1"
   },
   "scripts": {
-    "start": "NODE_ENV=development node scripts/start.js",
-    "build": "node scripts/build.js",
+    "start": "cross-env NODE_ENV=development node scripts/start.js",
+    "build": "cross-env NODE_ENV=production node scripts/build.js",
     "test": "node scripts/test.js",
     "prettier": "prettier --write --ignore-unknown .",
     "prettier:check": "prettier --check --ignore-unknown ."
@@ -104,6 +104,7 @@
     "@tailwindcss/forms": "^0.5.4",
     "@tailwindcss/typography": "^0.5.9",
     "autoprefixer": "^10.4.14",
+    "cross-env": "^7.0.3",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-prettier": "^5.0.0",
     "msw": "^1.2.3",
