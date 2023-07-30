@@ -6,6 +6,7 @@ import { useAppContext } from "../../context/AppContext"
 import { Bars3Icon, BellIcon } from "@heroicons/react/24/outline"
 import { MagnifyingGlassIcon } from "@heroicons/react/20/solid"
 import ProfileDropdown from "./ProfileDropdown"
+import { useLogin } from "../../features/auth/api/login"
 
 type HeaderBarProps = {
   userNavigation: { name: string; href: string }[]
@@ -16,8 +17,10 @@ const Header: React.FunctionComponent<HeaderBarProps> = (props) => {
   const { userNavigation, setSidebarOpen } = props
   const { user, loading, dispatch } = useAppContext()
   const [searchParams] = useSearchParams()
+  const { submit, isLoading } = useLogin({ onSuccess: () => {} })
 
   async function handleSignInClick() {
+    submit({ email: "user1@test.com", password: "password" })
     dispatch({ type: "authenticate" })
     const authenticatedUser = await authenticate()
     dispatch({
